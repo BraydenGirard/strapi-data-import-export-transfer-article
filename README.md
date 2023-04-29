@@ -1,6 +1,4 @@
-# strapi-data-transfer-article
-
-# Best Practices for Working with Strapi Cron Jobs
+# Transferring Data To A Remote with the Strapi CLI
 
 > Learning how to use the data transfer option in the Strapi CLI to migrate data from a local to remote or vice versa
 
