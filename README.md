@@ -48,9 +48,9 @@ It is important to note that your schemas have to match in order for the Strapi 
 
 In our start blog you can see our two projects below, first our project which has content and second our other project that currently does not have any content.
 
-![project with content]/images/strapi-with-content.png "Instance with Content")
+![project with content](/images/strapi-with-content.png "Instance with Content")
 
-![project with no content]/images/strapi-without-content.png "Instance without Content")
+![project with no content](/images/strapi-without-content.png "Instance without Content")
 
 The first thing we have to do is export the content from our populated instance. There are many options that can be applied to this CLI command but we will just stick to the basics in this example. You can see a full list of CLI commands in [the documentation](https://docs.strapi.io/dev-docs/data-management/export).
 
