@@ -54,35 +54,33 @@ In our start blog you can see our two projects below, first our project which ha
 
 The first thing we have to do is export the content from our populated instance. There are many options that can be applied to this CLI command but we will just stick to the basics in this example. You can see a full list of CLI commands in [the documentation](https://docs.strapi.io/dev-docs/data-management/export).
 
-[Image of export command]
+![strapi export command](/images/export-command.png "Strapi CLI Export")
 
 Now that we have exported our data and encrypred the export, we can now move over to our empty project. In the console for our empty project we will import this data by running the following commands from the CLI. Again, further options can be found in [the documentation](https://docs.strapi.io/dev-docs/data-management/import).
 
-```bash
-npm run strapi import -- -f ../export/export_20230428210311.tar.gz.enc
-```
+![strapi import command]/images/import-command.jpg "Strapi CLI Import")
 
 And just like that we now have our content form our local environment replicated in our remote staging environment. Below is a screenshot again of first our local environment and second our remote staging environment except this time after using the Strapi CLI export and then import features.
 
-[Image of project with Strapi content]
+![project with content after export](/images/strapi-with-content.png "Instance with Content After Export")
 
-[Image of other project with Strapi content]
+![project with new content after export](/images/strapi-with-imported-content.png "Instance with new Content After Import")
 
 ## Pushing Data to a Remote with Strapi Transfer
 
 Next, we will use the same Strapi blog template project to demonstrate how we can push our local content to a remote project (our staging environment). In order to do this, we first have to get an authorization token from our remote project. This token will be a push token which will allow us to push data into the remote instance. You can create this token in the Strapi admin as shown below.
 
-[Image of push token]
+![push transfer token admin](/images/transfer-token.png "Push Transfer Token Admin")
 
 Now that we have our push token, we can run the Strapi transfer CLI command. Again, before this is run you must make sure that the schema of your local project and the schema of your remote project match. In this case they do as both projects are the Strapi Blog Template except our remote is missing the start content. Below you can see us run the transfer command. For all the options of the transfer command you can [read the docs](https://docs.strapi.io/dev-docs/data-management/transfer).
 
-[Image of data transfer in CLI]
+![data transfer command](/images/strapi-transfer-command.png "Strapi CLI Transfer")
 
 And just like that, we have our data from our local environment pushed into our remote! It's really that easy. Below is a screenshot of first our local environment and second our remote.
 
-[Local content]
+![local project with content](/images/local-transfer-with-content.png "Local Instance with Content")
 
-[Remote content]
+![remote project with content](/images/remote-transfer-with-content.png "Remote Instance with new Content After Transfer")
 
 
 ## Wrap Up
