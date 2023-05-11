@@ -58,7 +58,9 @@ The first thing we have to do is export the content from our populated instance.
 
 Now that we have exported our data and encrypred the export, we can now move over to our empty project. In the console for our empty project we will import this data by running the following commands from the CLI. Again, further options can be found in [the documentation](https://docs.strapi.io/dev-docs/data-management/import).
 
-[Image of import]
+```bash
+npm run strapi import -- -f ../export/export_20230428210311.tar.gz.enc
+```
 
 And just like that we now have our content form our local environment replicated in our remote staging environment. Below is a screenshot again of first our local environment and second our remote staging environment except this time after using the Strapi CLI export and then import features.
 
